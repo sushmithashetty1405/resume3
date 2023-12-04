@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+     body {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .login-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+
+    .login-container h2 {
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-group button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .form-group button:hover {
+        background-color: #45a049;
+    }
+        /* Your existing CSS styles */
+    </style>
+</head>
+<body>
+   
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="validateForm()">Login</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === '' || password === '') {
+            alert('Username and password are required');
+            return;
+        }
+
+        // Check the length of the username (you can adjust the minimum and maximum lengths)
+        if (username.length < 4 || username.length > 40) {
+            alert('Username must be between 4 and 40 characters');
+            return;
+        }
+
+        // Check the complexity of the password (you can adjust these conditions)
+        if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/.test(password)) {
+            alert('Password must contain at least one lowercase letter, one uppercase letter, one digit, and be at least 8 characters long');
+            return;
+        }
+
+        // Redirect to the next page (replace 'nextPage.html' with the actual next page)
+        window.location.href = 'new.html';
+    }
+</script>
+
+</body>
+</html>
