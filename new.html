@@ -98,27 +98,27 @@ h2{
         width: 100%;
     }
 }
-        /* Your existing CSS styles remain unchanged */
-
-        /* Add new styles for the interactive elements */
-        .toggle-section {
+       
+        .toggle-section:hover {
             cursor: pointer;
             color: #48515c;
             text-decoration: underline;
             margin-bottom: 10px;
             display: block;
+            background-color: aqua;
         }
 
         .hidden {
             display: none;
         }
+        
 
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Your existing HTML content remains unchanged -->
+        
         <div class="header">
             <div class="img-area">
                 <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.34707881.1701597100&semt=ais "alt="" >
@@ -147,10 +147,8 @@ h2{
                     <li>Python</li>
                 </ul>
                 </div>
-                
-                <!-- ... Existing content ... -->
-            
-            
+
+        
                 <h2 class="toggle-section" onclick="toggleSection('edu-section')">Education</h2>
                 <div id="edu-section" class="hidden">
                     <h3>Pre University</h3>
